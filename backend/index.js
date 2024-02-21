@@ -15,7 +15,9 @@ app.use(cors())
 
 
 app.use('/api',router)
-
+app.use('/test',(req,res)=>{
+    res.send('server is running')
+})
 
 
 app.listen(port, async ()=>{

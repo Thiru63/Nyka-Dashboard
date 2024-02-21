@@ -2,11 +2,12 @@ const mongoose=require('mongoose')
 
 const Schema=mongoose.Schema
 
-const docterSchema=mongoose.Schema({
+const productSchema=mongoose.Schema({
     
     userId:{
       type:Schema.Types.ObjectId,
       required:true,
+      ref:'user'
       
     },
     id:{
@@ -48,6 +49,6 @@ const docterSchema=mongoose.Schema({
     timestamps: true 
 })
 
-const Docter=mongoose.model('docter',docterSchema)
+const Product=mongoose.model('product',productSchema)
 
-module.exports=Docter
+module.exports=Product
